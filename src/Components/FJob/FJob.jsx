@@ -1,6 +1,7 @@
 import { MdLocationOn, MdCurrencyBitcoin } from "react-icons/md";
+import { Link } from "react-router-dom";
 const FJob = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
+    const { id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
         <div className="card card-compact  bg-base-100 shadow-xl">
             <figure><img src={logo} /></figure>
@@ -16,7 +17,7 @@ const FJob = ({ job }) => {
                     <h2 className="flex gap-1">  <MdCurrencyBitcoin className="text-2xl"></MdCurrencyBitcoin>Salary:  {salary}</h2>
                 </div>
                 <div className="card-actions ">
-                    <button className="btn btn-primary">View details</button>
+                    <Link to={`/FJob/${id}`}><button className="btn btn-primary">View details</button></Link>
                 </div>
             </div>
         </div>
