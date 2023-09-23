@@ -1,4 +1,4 @@
-
+import { MdLocationOn, MdCurrencyBitcoin } from "react-icons/md";
 const FJob = ({ job }) => {
     const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
@@ -10,6 +10,10 @@ const FJob = ({ job }) => {
                 <div className="flex gap-4">
                     <button className="px-4 py-2 border rounded-lg font-bold text-[#9873FF] border-[#7E90FE]">{remote_or_onsite}</button>
                     <button className="px-4 py-2 border rounded-lg font-bold text-[#9873FF] border-[#7E90FE]">{job_type}</button>
+                </div>
+                <div className="flex gap-3 mt-3">
+                    <h2 className="flex gap-1"> <MdLocationOn className="text-2xl"></MdLocationOn> {location}</h2>
+                    <h2 className="flex gap-1">  <MdCurrencyBitcoin className="text-2xl"></MdCurrencyBitcoin>Salary:  {salary}</h2>
                 </div>
                 <div className="card-actions ">
                     <button className="btn btn-primary">View details</button>
