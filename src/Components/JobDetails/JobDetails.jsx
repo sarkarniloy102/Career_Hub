@@ -7,10 +7,10 @@ const JobDetails = () => {
     const jobs = useLoaderData();
     const { id } = useParams();
     const job = jobs.find(job => job.id == id);
-    console.log(job);
+    // console.log(job);
     const handleapplyjob = () => {
 
-        savejobapplication(id);
+        savejobapplication(parseInt(id));
         toast.success('Applied Successfully', {
             position: "top-center",
             autoClose: 5000,

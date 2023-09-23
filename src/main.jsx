@@ -25,7 +25,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/applied",
-        element: <AppliedJob></AppliedJob>
+        element: <AppliedJob></AppliedJob>,
+        loader: () => fetch('../jobs.json') //do not load all data . load only what you need
       },
       {
         path: "/FJob/:id",
